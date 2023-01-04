@@ -16,6 +16,7 @@ app.use(cors());
 app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
+   console.log("in production");
    const __dirname = path.resolve();
    app.use(express.static(path.join(__dirname, "../frontend", "build")));
    app.get("/*", function (req, res) {
