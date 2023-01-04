@@ -3,7 +3,7 @@ import axios from 'axios';
 console.log(process.env.NODE_ENV)
 const API_ROOT =
   process.env.NODE_ENV === "production"
-    ? "/api"
+    ? "https://final-project-production-e536.up.railway.app/"
     : "http://localhost:4000/";
 
 // const instance = axios.create({
