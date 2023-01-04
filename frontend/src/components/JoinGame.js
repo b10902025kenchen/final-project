@@ -9,6 +9,7 @@ const initArray = Array(9).fill(Array(9).fill(0));
 let num = 0;
 let client;
 
+console.log(process.env.NODE_ENV);
 const WS_URL =
   process.env.NODE_ENV === "production"
     ? window.location.origin.replace(/^http/, "ws")

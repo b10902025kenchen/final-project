@@ -48,7 +48,7 @@ if (process.env.NODE_ENV === "production") {
    });
  }
 
-const port = process.env.PORT || 4001;
+const port = process.env.PORT || 4000;
 
 app.listen(port, () =>
  console.log(`Example app listening on port ${port}!`),
@@ -83,5 +83,5 @@ DB.once('open', () => {
  });
 });
 
-const PORT = process.env.PORT || 4000;
-server.listen(PORT, () => { console.log(`Example app listening on port ${PORT}!`) });
+// const PORT = process.env.PORT || 4000;
+server.listen(port, () => { console.log(`Example app listening on port ${port}!`) });
