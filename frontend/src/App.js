@@ -11,6 +11,8 @@ const App = () => {
 
   console.log(currentUser);
 
+  console.log(success);
+
   const currentUserOnChange = ( user ) => {
     setcurrentUser(user);
   }

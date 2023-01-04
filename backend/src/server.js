@@ -8,6 +8,7 @@ import http from "http";
 import wsConnect from './wsConnect';
 import WebSocket from "ws";
 import {v4 as uuidv4} from 'uuid';
+import path from "path";
 
 // db.connect();
 // dotenv.config();
@@ -38,6 +39,15 @@ import {v4 as uuidv4} from 'uuid';
 const app = express();
 app.use(cors());
 app.use(express.json());
+
+if (process.env.NODE_ENV === "production") {
+   const __dirname = path.resolve();
+   app.use(express.static(path.join(__dirname, "../frontend", "build")));
+   app.get("/*", function (req, res) {
+     res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
+   });
+ }
+
 const port = process.env.PORT || 4001;
 
 app.listen(port, () =>

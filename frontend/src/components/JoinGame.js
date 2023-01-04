@@ -9,11 +9,16 @@ const initArray = Array(9).fill(Array(9).fill(0));
 let num = 0;
 let client;
 
+const WS_URL =
+  process.env.NODE_ENV === "production"
+    ? window.location.origin.replace(/^http/, "ws")
+    : "ws://localhost:4000";
+
 const JoinGame = ({currentUser, stageOnChange}) => {
 
     if(num === 0)
     {
-      client = new WebSocket('ws://localhost:4000');
+      client = new WebSocket(WS_URL);
       client.onopen = () => console.log('Backend socket server connected!');
       num++;
     }
