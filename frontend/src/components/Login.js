@@ -56,7 +56,9 @@ const Login = ({successOnClick, changeStatus, currentUserOnChange}) => {
                 console.log('fail');
                 setErrMsg('Wrong Username or password!');
             }
+            console.log("59");
         } catch (err) {
+            console.log(err);
             if (!err?.response) 
             {
                 setErrMsg('No Server Response');
