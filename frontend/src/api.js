@@ -6,7 +6,8 @@ import axios from 'axios';
 //     ? "api"
 //     : "http://localhost:4000/";
 // console.log("hello");
-const API_ROOT = "http://localhost:4000";
+// const API_ROOT = "http://localhost:4000";
+const API_ROOT = "https://final-project-0rwb.onrender.com";
 // console.log(API_ROOT);
 
 // const instance = axios.create({
