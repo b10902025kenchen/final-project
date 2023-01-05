@@ -41,6 +41,7 @@ const Login = ({successOnClick, changeStatus, currentUserOnChange}) => {
                     password: encrypt(pwd),
                 },
             });
+            console.log(response);
             console.log("hello");
             if(response === 'success')
             {

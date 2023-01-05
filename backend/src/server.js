@@ -15,14 +15,14 @@ console.log(process.env.NODE_ENV);
 app.use(cors());
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-   console.log("in production");
-   const __dirname = path.resolve();
-   app.use(express.static(path.join(__dirname, "../frontend", "build")));
-   app.get("/*", function (req, res) {
-     res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
-   });
- }
+// if (process.env.NODE_ENV === "production") {
+//    console.log("in production");
+//    const __dirname = path.resolve();
+//    app.use(express.static(path.join(__dirname, "../frontend", "build")));
+//    app.get("/*", function (req, res) {
+//      res.sendFile(path.join(__dirname, "../frontend", "build", "index.html"));
+//    });
+//  }
 
 const port = process.env.PORT || 4000;
 app.use('/', routes);
@@ -66,9 +66,9 @@ server.listen(port, () => { console.log(`Example app listening on port ${port}!`
 //  const port = process.env.PORT || 4001;
 //  server.listen(port, () => { console.log(`Example app listening on port ${port}!`) });
 
-/*app.get('/', (req, res) => {
- res.send('Hello, World!');
-});*/
+// app.get('/', (req, res) => {
+//  res.send('Hello, World!');
+// });
 
 // app.listen(port, () =>
 //  console.log(`Example app listening on port ${port}!`),
