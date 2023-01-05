@@ -15,7 +15,7 @@ console.log(process.env.NODE_ENV);
 //     ? window.location.origin.replace(/^http/, "ws")
 //     : "ws://localhost:4000";
 
-const WS_URL = "https://final-project-0rwb.onrender.com";
+const WS_URL = "ws://final-project-0rwb.onrender.com";
 
 const JoinGame = ({currentUser, stageOnChange}) => {
 
