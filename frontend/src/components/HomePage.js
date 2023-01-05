@@ -40,7 +40,7 @@ const HomePage = ({ stageOnChange, startGameOnClick, LogOut, currentUserOnChange
       <p className='title'>GoBang!</p>
       <div className='btnWrapper'>
         {/* <Button>Start Game</Button> */}
-        <button className="btn" onClick={handleClick4}><TrophyOutlined></TrophyOutlined> Battle</button>
+        {/* <button className="btn" onClick={handleClick4}><TrophyOutlined></TrophyOutlined> Battle</button> */}
         <button className="btn" onClick={handleClick}><PlayCircleOutlined></PlayCircleOutlined> Play</button>
         <button className="btn" onClick={handleClick2}><ProfileOutlined></ProfileOutlined> Profile</button>
         <button className="btn" onClick={handleClick3}><SettingOutlined></SettingOutlined> Settings</button>
